@@ -179,6 +179,24 @@ img {
   }
 }
 
+@media screen and (min-width: 1158px) {
+  .logo {
+    margin-right: 76px;
+  }
+  .address {
+    font-style: normal;
+    margin-left: auto;
+  }
+  .address-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+  .address-link {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
 .section-first {
   background-color: #2e2f42;
   background-image: linear-gradient(
