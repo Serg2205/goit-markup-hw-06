@@ -91,12 +91,6 @@ img {
   padding: 17px 0;
 }
 .text-color {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
   color: #2e2f42;
 }
 
@@ -214,7 +208,7 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-resolution: 192dpi) {
+@media screen and (min-resolution: 192dpi) and (max-width: 767px) {
   .section-first {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -256,6 +250,10 @@ img {
   margin-left: auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.page-button:hover,
+.page-button:focus {
+  background-color: #404bbf;
+}
 
 @media screen and (min-width: 768px) {
   .section-first {
@@ -266,7 +264,7 @@ img {
         rgba(46, 47, 66, 0.7)
       ),
       url(../images/people_office-tablet.jpg);
-    min-width: 768px;
+    max-width: 1157px;
   }
   .title {
     max-width: 496px;
@@ -274,43 +272,60 @@ img {
     line-height: 1.07;
   }
 }
+@media screen and (min-resolution: 192dpi) and (min-width: 768px) {
+  .section-first {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people_office-tablet@2x.jpg);
+  }
+}
+@media screen and (min-width: 1158px) {
+  .section-first {
+    padding-top: 188px;
+    padding-bottom: 188px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people_office.jpg);
+    max-width: 1440px;
+  }
+}
+@media screen and (min-resolution: 192dpi) and (min-width: 1158px) {
+  .section-first {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/people-office@2x.jpg);
+  }
+}
 
 .section-second {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
 }
 
 .objectives {
-  display: flex;
-  gap: 24px;
+  display: block;
 }
 
 .objectives-item {
-  width: calc((100% - 72px) / 4);
+  margin-bottom: 72px;
 }
 
 .ikons-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 264px;
-  height: 112px;
-  background: #f4f4fd;
-  border: 1px solid #8e8f99;
-  border-radius: 4px;
-  margin-bottom: 8px;
-}
-
-.page-button:hover,
-.page-button:focus {
-  background-color: #404bbf;
+  display: none;
 }
 
 .page-name {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.1;
   letter-spacing: 0.02em;
+  text-transform: capitalize;
+  text-align: center;
   color: #2e2f42;
   margin-bottom: 8px;
 }
@@ -320,10 +335,48 @@ img {
   letter-spacing: 0.02em;
   color: #434455;
 }
+@media screen and (min-width: 768px) {
+  .objectives {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .objectives-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .page-name {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .section-second {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .objectives-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .ikons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 264px;
+    height: 112px;
+    background: #f4f4fd;
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+}
 
 .our-team {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background-color: #f4f4fd;
+}
+.container-our-team {
+  padding: 0 28px;
 }
 
 .page-title {
@@ -339,19 +392,14 @@ img {
 
 .our-team-list {
   display: flex;
-  gap: 24px;
+  gap: 72px;
   flex-wrap: wrap;
 }
 
 .our-team-item {
-  width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-}
-
-.our-team {
-  background-color: #f4f4fd;
 }
 
 .name-team-position {
@@ -407,6 +455,20 @@ img {
 }
 .icons {
   fill: #f4f4fd;
+}
+@media screen and (min-width: 768px) {
+  .our-team-list {
+    justify-content: center;
+    gap: 72px 24px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .our-team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .our-team-item {
+  width: calc((100% - 72px) / 4);
 }
 
 .our-portfolio {
