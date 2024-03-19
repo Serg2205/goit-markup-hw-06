@@ -30,6 +30,8 @@ body {
 
 img {
   display: block;
+  min-width: 100%;
+  height: auto;
 }
 
 .visually-hidden {
@@ -304,15 +306,17 @@ img {
 }
 
 .section-second {
-  padding-top: 96px;
+  padding: 96px 0;
 }
 
 .objectives {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 .objectives-item {
-  margin-bottom: 72px;
+  width: 100%;
 }
 
 .ikons-container {
@@ -337,9 +341,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .objectives {
-    display: flex;
-    gap: 24px;
-    flex-wrap: wrap;
+    gap: 72px 24px;
   }
   .objectives-item {
     width: calc((100% - 24px) / 2);
@@ -468,7 +470,8 @@ img {
     padding-bottom: 120px;
   }
   .our-team-item {
-  width: calc((100% - 72px) / 4);
+    width: calc((100% - 72px) / 4);
+  }
 }
 
 .our-portfolio {
