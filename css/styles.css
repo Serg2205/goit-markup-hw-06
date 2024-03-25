@@ -65,6 +65,8 @@ img {
   }
 }
 
+/* =========================== header =========================== */
+
 .page-header {
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
@@ -192,6 +194,8 @@ img {
     line-height: 1.5;
   }
 }
+
+/* =========================== /header =========================== */
 
 .section-first {
   background-color: #2e2f42;
@@ -1004,16 +1008,28 @@ img {
   }
   .mobile-list {
     padding-top: 69px;
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
   }
 
   .mobile-item {
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.11111;
+    line-height: 1.11;
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #2e2f42;
+  }
+  .mobile-item:hover {
+    color: #404bbf;
+  }
+  .address-mobile-menu-link {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #434455;
   }
 }
 
