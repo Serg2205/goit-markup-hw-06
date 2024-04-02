@@ -1020,16 +1020,60 @@ img {
     letter-spacing: 0.02em;
     text-transform: capitalize;
     color: #2e2f42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   .mobile-item:hover {
     color: #404bbf;
   }
+  .address-mobile {
+    font-style: normal;
+    margin-top: 171px;
+    margin-bottom: 48px;
+  }
+  .address-mobile-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
   .address-mobile-menu-link {
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .address-mobile-menu-link:hover {
+    color: #404bbf;
+  }
+
+  .mobile-icon-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .mobile-icon-item {
+    width: 40px;
+    height: 40px;
+  }
+  .mobile-icon-logo {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .mobile-icon-logo:hover,
+  .mobile-icon-logo:focus {
+    background-color: #31d0aa;
+  }
+  .mobile-icon {
+    fill: #f4f4fd;
   }
 }
 
