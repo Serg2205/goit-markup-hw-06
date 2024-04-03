@@ -363,6 +363,13 @@ img {
   .objectives-item {
     width: calc((100% - 72px) / 4);
   }
+  .page-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+  }
   .ikons-container {
     display: flex;
     justify-content: center;
@@ -979,7 +986,7 @@ img {
     background-color: #fff;
     opacity: 0;
     visibility: hidden;
-    position: none;
+    pointer-events: none;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
       visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
@@ -994,6 +1001,8 @@ img {
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding-bottom: 40px;
+    padding-top: 69px;
   }
 
   .mobile-model-menu-btn {
@@ -1006,8 +1015,11 @@ img {
     line-height: 0;
     fill: #2e2f42;
   }
+  .mobile-nav {
+    margin-bottom: auto;
+  }
+
   .mobile-list {
-    padding-top: 69px;
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
@@ -1027,7 +1039,6 @@ img {
   }
   .address-mobile {
     font-style: normal;
-    margin-top: 171px;
     margin-bottom: 48px;
   }
   .address-mobile-list {
